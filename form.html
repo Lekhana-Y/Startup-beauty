@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form </title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="loginForm" action="/submit" method="post">
+            <h2>Login/Sign up</h2>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div><button type="submit">Login/Sign up</button></div><br>
+        <div><a href=startup.html><button type="button">Home</button></a></div>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript to handle form submission and show an alert
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            alert('Your form submitted successfully !');
+            // Uncomment the line below to actually submit the form after the alert
+            // this.submit();
+        });
+    </script>
+</body>
+</html>
